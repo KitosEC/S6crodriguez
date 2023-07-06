@@ -23,7 +23,7 @@
             <Label Text="EDAD" FontSize="16" TextColor="Red" Grid.Row="0" Grid.Column="3"/>
         </Grid>
 
-        <ListView x:Name="listaEstudiantes">
+        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -53,7 +53,7 @@
         </ListView>
 
         <Button x:Name="btnConsultar" Text="CONSULTAR" Clicked="btnConsultar_Clicked"></Button>
-
+        <Button x:Name="btnInsertar" Text="INSERTAR" Clicked="btnInsertar_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>

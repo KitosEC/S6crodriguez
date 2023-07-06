@@ -13,7 +13,7 @@ namespace S6crodriguez
 {
     public partial class MainPage : ContentPage
     {
-        private string URL = "http://192.168.10.45/ws_uisrael/post.php";
+        private string URL = "http://192.168.100.86/ws_uisrael/post.php";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<estudiante> post;
 
@@ -34,8 +34,19 @@ namespace S6crodriguez
         }
         private async void btnConsultar_Clicked(object sender, EventArgs e)
         {
+            this.Obtener();
            
+        }
 
+        private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var objetoEstudiante = (estudiante)e.SelectedItem;
+            Navigation.PushAsync(new ActualizarEliminar(objetoEstudiante));
+        }
+
+        private async void btnInsertar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Insertar());
         }
     }
 }
