@@ -13,7 +13,7 @@ namespace S6crodriguez
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Insertar : ContentPage
     {
-        private string URL = "http://192.168.100.86/ws_uisrael/post.php";
+        private string URL = "http://192.168.10.45/ws_uisrael/post.php";
         public Insertar()
         {
             InitializeComponent();
@@ -30,7 +30,10 @@ namespace S6crodriguez
                 datos.Add("edad", txtedad.Text);
 
                 cliente.UploadValues(URL, "POST", datos);
-                DisplayAlert("Alerta", "Dato Insertado", "Cerrar");
+
+                var mensaje = "Dato ingresado con exito";
+                DependencyService.Get<mensaje>().longAlert(mensaje);
+
                 Navigation.PushAsync(new MainPage());
             }
             catch (Exception ex)

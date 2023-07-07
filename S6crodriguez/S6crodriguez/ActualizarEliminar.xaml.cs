@@ -13,7 +13,7 @@ namespace S6crodriguez
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ActualizarEliminar : ContentPage
     {
-        private string URL = "http://192.168.100.86/ws_uisrael/post.php?codigo=";
+        private string URL = "http://192.168.10.45/ws_uisrael/post.php?codigo=";
         public ActualizarEliminar(estudiante estudiante)
         {
             InitializeComponent();
@@ -45,7 +45,8 @@ namespace S6crodriguez
             catch (Exception ex)
             {
 
-                DisplayAlert("Alerta", ex.Message, "Cerrar");
+                var mensaje = "Dato actualizado con exito";
+                DependencyService.Get<mensaje>().longAlert(mensaje);
             }
         }
         private void btnEliminar_Clicked(object sender, EventArgs e)
@@ -58,7 +59,9 @@ namespace S6crodriguez
 
 
                 cliente.UploadValues(URL + txtcodigo.Text, "DELETE", datos);
-                DisplayAlert("Alerta", "Dato Eliminado", "Cerrar");
+                var mensaje = "Dato eliminado con exito";
+                DependencyService.Get<mensaje>().longAlert(mensaje);
+
                 Navigation.PushAsync(new MainPage());
 
             }

@@ -13,7 +13,7 @@ namespace S6crodriguez
 {
     public partial class MainPage : ContentPage
     {
-        private string URL = "http://192.168.100.86/ws_uisrael/post.php";
+        private string URL = "http://192.168.10.45/ws_uisrael/post.php";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<estudiante> post;
 

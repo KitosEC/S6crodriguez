@@ -4,9 +4,7 @@
              x:Class="S6crodriguez.Insertar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Insertar estudiante"
-                   FontSize="20"
-                   HorizontalTextAlignment="Center" />
+            <Label Text="Insertar estudiante" FontSize="20" HorizontalTextAlignment="Center" />
             <Entry x:Name="txtcodigo"
                    Placeholder="Ingrese el codigo"
                    Keyboard="Numeric"></Entry>

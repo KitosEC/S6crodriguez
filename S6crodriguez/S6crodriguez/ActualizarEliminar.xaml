@@ -5,8 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Actualizar o eliminar Estudiante" FontSize=" 20" HorizontalTextAlignment="Center" />
-            <Entry x:Name="txtcodigo" IsEnabled="
-                   False"></Entry>
+            <Entry x:Name="txtcodigo" IsEnabled="False"></Entry>
             <Entry x:Name="txtnombre"></Entry>
             <Entry x:Name="txtapellido"></Entry>            
             <Entry x:Name="txtedad"></Entry>
